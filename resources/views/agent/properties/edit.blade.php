@@ -6,8 +6,8 @@
 
 @section('content')
 
-    <section class="section">
-        <div class="container">
+<section style="background-color:#282828 " class="section">
+    <div class="container">
             <div class="row">
 
                 <div class="col s12 m3">
@@ -18,51 +18,51 @@
 
                 <div class="col s12 m9">
                     <div class="agent-content">
-                        <h4 class="agent-title">EDIT PROPERTY</h4>
+                        <h4  style="background-color: #393C3F;color: aliceblue" class="agent-title">EDIT PROPERTY</h4>
 
                         <form action="{{route('agent.properties.update',$property->slug)}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <i class="material-icons prefix">title</i>
-                                    <input id="title" name="title" type="text" class="validate" value="{{ $property->title }}" data-length="200">
+                                    <i style="color: cyan" class="material-icons prefix">title</i>
+                                    <input style="color: aliceblue" id="title" name="title" type="text" class="validate" value="{{ $property->title }}" data-length="200">
                                     <label for="title">Title</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">attach_money</i>
-                                    <input id="price" name="price" type="number" value="{{ $property->price }}" class="validate">
+                                    <i style="color: cyan" class="material-icons prefix">attach_money</i>
+                                    <input style="color: aliceblue" id="price" name="price" type="number" value="{{ $property->price }}" class="validate">
                                     <label for="price">Price</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">business</i>
-                                    <input id="area" name="area" type="number" value="{{ $property->area }}" class="validate">
+                                    <i style="color: cyan" class="material-icons prefix">business</i>
+                                    <input style="color: aliceblue" id="area" name="area" type="number" value="{{ $property->area }}" class="validate">
                                     <label for="area">Floor Area</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">airline_seat_flat</i>
-                                    <input id="bedroom" name="bedroom" type="number" value="{{ $property->bedroom }}" class="validate">
+                                    <i style="color: cyan" class="material-icons prefix">airline_seat_flat</i>
+                                    <input style="color: aliceblue" id="bedroom" name="bedroom" type="number" value="{{ $property->bedroom }}" class="validate">
                                     <label for="bedroom">Bedroom</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">event_seat</i>
-                                    <input id="bathroom" name="bathroom" type="number" value="{{ $property->bathroom }}" class="validate">
+                                    <i style="color: cyan" class="material-icons prefix">event_seat</i>
+                                    <input style="color: aliceblue" id="bathroom" name="bathroom" type="number" value="{{ $property->bathroom }}" class="validate">
                                     <label for="bathroom">Bathroom</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s4">
-                                    <i class="material-icons prefix">location_city</i>
-                                    <input id="city" name="city" type="text" value="{{ $property->city }}" class="validate">
+                                    <i style="color: cyan" class="material-icons prefix">location_city</i>
+                                    <input style="color: aliceblue" id="city" name="city" type="text" value="{{ $property->city }}" class="validate">
                                     <label for="city">City</label>
                                 </div>
                                 <div class="input-field col s8">
-                                    <i class="material-icons prefix">account_balance</i>
-                                    <textarea id="address" name="address" class="materialize-textarea">{{ $property->address }}</textarea>
+                                    <i style="color: cyan" class="material-icons prefix">account_balance</i>
+                                    <textarea style="color: aliceblue" id="address" name="address" class="materialize-textarea">{{ $property->address }}</textarea>
                                     <label for="address">Address</label>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="input-field col s9">
                                     <i class="material-icons prefix">mode_edit</i>
-                                    <textarea id="description" name="description" class="materialize-textarea">{{ $property->description }}</textarea>
+                                    <textarea style="color: aliceblue" id="description" name="description" class="materialize-textarea">{{ $property->description }}</textarea>
                                     <label for="description">Description</label>
                                 </div>
                             </div>
@@ -115,9 +115,9 @@
                                 </div>
                                 <div class="input-field col s6">
                                     <select multiple name="features[]">
-                                        <option value="" disabled>Choose Features</option>
+                                        <option style="color: aliceblue" value="" disabled>Choose Features</option>
                                         @foreach($features as $feature)
-                                            <option value="{{ $feature->id }}" 
+                                            <option style="color: aliceblue" value="{{ $feature->id }}" 
                                                     @foreach($property->features as $checked)
                                                         {{ ($checked->id == $feature->id) ? 'selected' : '' }}
                                                     @endforeach
@@ -130,12 +130,12 @@
 
                             <div class="row">
                                 <div class="file-field input-field col s10">
-                                    <div class="btn indigo">
+                                    <div class="btn cyan">
                                         <span>Featured Image</span>
                                         <input type="file" name="image">
                                     </div>
                                     <div class="file-path-wrapper">
-                                        <input class="file-path validate" type="text">
+                                        <input style="color: aliceblue" class="file-path validate" type="text">
                                     </div>
                                 </div>
                                 <div class="file-field input-field col s2">
@@ -147,33 +147,33 @@
 
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">map</i>
-                                    <input id="location_latitude" name="location_latitude" type="text" value="{{ $property->location_latitude }}" class="validate">
+                                    <i style="color: cyan" class="material-icons prefix">map</i>
+                                    <input style="color: aliceblue" id="location_latitude" name="location_latitude" type="text" value="{{ $property->location_latitude }}" class="validate">
                                     <label for="location_latitude">Latitude</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">map</i>
-                                    <input id="location_longitude" name="location_longitude" type="text" value="{{ $property->location_longitude }}" class="validate">
+                                    <i style="color: cyan" class="material-icons prefix">map</i>
+                                    <input style="color: aliceblue" id="location_longitude" name="location_longitude" type="text" value="{{ $property->location_longitude }}" class="validate">
                                     <label for="location_longitude">Longitude</label>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <i class="material-icons prefix">voice_chat</i>
-                                    <input id="video" name="video" type="text" value="{{ $property->video }}" class="validate">
+                                    <i style="color: cyan" class="material-icons prefix">voice_chat</i>
+                                    <input style="color: aliceblue" id="video" name="video" type="text" value="{{ $property->video }}" class="validate">
                                     <label for="video">Youtube Link</label>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="file-field input-field col s10">
-                                    <div class="btn indigo">
+                                    <div class="btn cyan">
                                         <span>Floor Plan</span>
                                         <input type="file" name="floor_plan">
                                     </div>
                                     <div class="file-path-wrapper">
-                                        <input class="file-path validate" type="text">
+                                        <input style="color: aliceblue" class="file-path validate" type="text">
                                     </div>
                                 </div>
                                 <div class="file-field input-field col s2">
@@ -185,8 +185,8 @@
 
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <i class="material-icons prefix">place</i>
-                                    <textarea id="nearby" name="nearby" class="materialize-textarea">{{ $property->nearby }}</textarea>
+                                    <i style="color: cyan" class="material-icons prefix">place</i>
+                                    <textarea style="color: aliceblue" id="nearby" name="nearby" class="materialize-textarea">{{ $property->nearby }}</textarea>
                                     <label for="nearby">Nearby</label>
                                 </div>
                             </div>
@@ -205,20 +205,20 @@
                             @endif
                             <div class="row">
                                 <div class="file-field input-field col s12">
-                                    <div class="btn indigo">
+                                    <div class="btn cyan">
                                         <span>Upload Gallery Images</span>
                                         <input type="file" name="gallaryimage[]" multiple>
-                                        <span class="helper-text" data-error="wrong" data-success="right">Upload one or more images</span>
+                                        <span style="color: cyan" class="helper-text" data-error="wrong" data-success="right">Upload one or more images</span>
                                     </div>
                                     <div class="file-path-wrapper">
-                                        <input class="file-path validate" type="text" placeholder="Upload one or more images">
+                                        <input style="color: aliceblue"  class="file-path validate" type="text" placeholder="Upload one or more images">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col s12 m-t-30">
-                                    <button class="btn waves-effect waves-light btn-large indigo darken-4" type="submit">
+                                    <button class="btn waves-effect waves-light btn-large cyan darken-4" type="submit">
                                         Submit
                                         <i class="material-icons right">send</i>
                                     </button>

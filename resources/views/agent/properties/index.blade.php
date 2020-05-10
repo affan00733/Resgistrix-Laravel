@@ -5,8 +5,8 @@
 
 @section('content')
 
-    <section class="section">
-        <div class="container">
+<section style="background-color:#282828 " class="section">
+    <div class="container">
             <div class="row">
 
                 <div class="col s12 m3">
@@ -17,10 +17,10 @@
 
                 <div class="col s12 m9">
 
-                    <h4 class="agent-title">PROPERTY LIST</h4>
+                    <h4 style="background-color: #393C3F;color: aliceblue" class="agent-title">PROPERTY LIST</h4>
                     
                     <div class="agent-content">
-                        <table class="striped responsive-table">
+                        <table style="color: aliceblue" class="striped responsive-table">
                             <thead>
                                 <tr>
                                     <th>SL.</th>
@@ -47,12 +47,12 @@
                                         <td>{{ ucfirst($property->city) }}</td>
 
                                         <td class="center">
-                                            <span><i class="material-icons small-comment left">comment</i>{{ $property->comments_count }}</span>
+                                            <span><i  class="material-icons small-comment left">comment</i>{{ $property->comments_count }}</span>
                                         </td>
 
                                         <td class="center">
                                             @if($property->featured == true)
-                                                <span class="indigo-text"><i class="material-icons small-star">stars</i></span>
+                                                <span class="indigo-text"><i style="color: cyan" class="material-icons small-star">stars</i></span>
                                             @endif
                                         </td>
     

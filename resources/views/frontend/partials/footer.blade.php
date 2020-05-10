@@ -2,12 +2,12 @@
     <div class="container">
         <div class="row">
             <div class="col m4 s12">
-                <h5 class="white-text uppercase">About Us</h5>
+                {{-- <h5 class="white-text uppercase">About Us</h5>
                 @if(isset($footersettings[0]) && $footersettings[0]['aboutus'])
                     <p class="grey-text text-lighten-4">{{ $footersettings[0]['aboutus'] }}</p>
                 @else
                     <p class="grey-text text-lighten-4">Real estate company description goes here.</p>
-                @endif
+                @endif --}}
             </div>
             <div class="col m6 s12">
                 <h5 class="white-text uppercase">Recent Properties</h5>

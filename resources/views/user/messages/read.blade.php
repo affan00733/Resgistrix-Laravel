@@ -5,8 +5,8 @@
 
 @section('content')
 
-    <section class="section">
-        <div class="container">
+<section style="background-color:#282828 " class="section">
+    <div class="container">
             <div class="row">
 
                 <div class="col s12 m3">
@@ -17,19 +17,19 @@
 
                 <div class="col s12 m9">
 
-                    <h4 class="agent-title">READ MESSAGES</h4>
+                    <h4 style="background-color: #393C3F;color: aliceblue" class="agent-title">READ MESSAGES</h4>
                     
                     <div class="agent-content">
                         
-                        <span><strong>From:</strong> <em>{{ $message->name }} < {{ $message->email }} ></em></span> <br>
-                        <span><strong>Phone:</strong> {{ $message->phone }}</span>
+                        <span style="color: aliceblue"><strong>From:</strong> <em>{{ $message->name }} < {{ $message->email }} ></em></span> <br>
+                        <span style="color: aliceblue"><strong>Phone:</strong> {{ $message->phone }}</span>
 
                         <div class="read-message">
-                            <span>Message:</span>
-                            <p>{!! $message->message !!}</p>
+                            <span style="color: aliceblue">Message:</span>
+                            <p style="background-color: #393C3F;color: aliceblue">{!! $message->message !!}</p>
                         </div>
 
-                        <a href="{{route('user.message.replay',$message->id)}}" class="btn btn-small indigo waves-effect">
+                        <a href="{{route('user.message.replay',$message->id)}}" class="btn btn-small cyan waves-effect">
                             <i class="material-icons left">replay</i>
                             <span>Replay</span>
                         </a>

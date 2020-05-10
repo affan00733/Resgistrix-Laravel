@@ -89,20 +89,20 @@
                                 <li class="collection agent-message">
                                     <form class="agent-message-box" action="" method="POST">
                                         @csrf
-                                        <input type="hidden" name="agent_id" value="{{ $agent->id }}">
-                                        <input type="hidden" name="user_id" value="{{ auth()->id() }}">
+                                        <input style="color: aliceblue" type="hidden" name="agent_id" value="{{ $agent->id }}">
+                                        <input style="color: aliceblue"  type="hidden" name="user_id" value="{{ auth()->id() }}">
                                             
                                         <div class="box">
-                                            <input type="text" name="name" placeholder="Your Name">
+                                            <input style="color: aliceblue"  type="text" name="name" placeholder="Your Name">
                                         </div>
                                         <div class="box">
-                                            <input type="email" name="email" placeholder="Your Email">
+                                            <input style="color: aliceblue"  type="email" name="email" placeholder="Your Email">
                                         </div>
                                         <div class="box">
-                                            <input type="number" name="phone" placeholder="Your Phone">
+                                            <input style="color: aliceblue"  type="number" name="phone" placeholder="Your Phone">
                                         </div>
                                         <div class="box">
-                                            <textarea name="message" placeholder="Your Msssage"></textarea>
+                                            <textarea style="color: aliceblue"  name="message" placeholder="Your Msssage"></textarea>
                                         </div>
                                         <div class="box">
                                             <button id="msgsubmitbtn" class="btn waves-effect waves-light w100 cyan" type="submit">
